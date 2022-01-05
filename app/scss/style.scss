@@ -5,6 +5,144 @@
 @import 'global';
 
 
+.header{
+  &__top{
+    padding: 30px 0;
+    background-color: $bg;
+  }
+  &__top-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu__list{
+    display: flex;
+    &-item + .menu__list-item{
+      margin-left: 60px;
+    }
+    &-link{
+      line-height: 20px;
+      transition: all .5s;
+      &:hover{
+        color: $accent;
+      }
+    }
+  }
+  &__top-link{
+    width: 188px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    transition: all .5s;
+    &:hover{
+      background-color: rgba($color: $bg-item, $alpha: .5);
+    }
+  }
+
+  &__content{
+    padding: 76px 0 100px;
+    background-image: url('../images/header_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: calc(100vh - 105px);
+  }
+  &__content-inner{
+    position: relative;
+    min-height: 624px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__content-top{
+    position: absolute;
+    max-width: 395px;
+    right: 0;
+    top: 0;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: right;
+    @extend %montserrat-600;
+  }
+  &__content-main{
+    max-width: 595px;
+    padding: 24px;
+    background-image: url('../images/header-content-bg.svg');
+    background-position: right top;
+    background-repeat: no-repeat;
+    &__title{  
+      font-size: 48px;
+      line-height: 56px;
+      text-align: right;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      @extend %playfairDisplay-400;
+    }
+    &__subtitle{
+      font-size: 20px;
+      text-align: right;
+      max-width: 400px;
+      margin-left: auto;
+      margin-bottom: 80px;
+      @extend %montserrat-600;
+    }
+    &__link{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-right: 42px;
+      position: relative;
+      width: 250px;
+      height: 55px;
+      border: 1px solid #fff;
+      margin-left: auto;
+      transition: all .5s;
+      &::before{
+        content: '';
+        position: absolute;
+        background-image: url('../images/icons/arrow.svg');
+        width: 12px;
+        height: 12px;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &:hover{
+        background-color: rgba($color: $bg-item, $alpha: .5);
+      }
+    }
+  }
+
+  &__content-bottom{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    &__subtitle{
+      font-size: 20px;
+      text-transform: uppercase;
+      max-width: 309px;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      @extend %montserrat-600;
+      position: relative;
+      &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 10px;
+        background-color: #fff;
+        bottom: 0;
+      }
+    }
+    &__text{
+      font-size: 14px;
+      max-width: 300px;
+      @extend %montserrat-600;
+    }
+  }
+}
+
 
 
 

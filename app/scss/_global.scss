@@ -1,0 +1,19 @@
+
+
+
+body{
+  font-size: 16px;
+  line-height: 150%;
+  color: #fff;
+  @extend %montserrat-500;
+}
+
+a{
+  color: #fff;
+}
+
+.container{
+  max-width: 1245px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
