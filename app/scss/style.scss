@@ -219,7 +219,63 @@
     margin-bottom: 30px;
   }
 }
-
+.portfolio{
+  background-color: $bg2;
+  padding-bottom: 100px;
+  &__title{
+    font-size: 36px;
+    margin-bottom: 70px;
+    @extend %playfairDisplay-400;
+  }
+  &__inner{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 100px 20px;
+    margin-bottom: 85px;
+  }
+  &__inner--hiden{
+    display: none;
+  }
+  &__item{
+    text-align: center;
+  }
+  &__item-img{
+    margin-bottom: 15px;
+  }
+  &__item-title{
+    font-size: 20px;
+    transition: all .5s;
+    @extend %montserrat-600;
+    &:hover{
+      color: $accent;
+    }
+  }
+  &__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 42px;
+    width: 226px;
+    height: 55px;
+    border: 1px solid #fff;
+    position: relative;
+    margin: 0 auto;
+    transition: all .5s;
+    &::before{
+      content: '';
+      position: absolute;
+      right: 30px;
+      top: 20px;
+      width: 12px;
+      height: 12px;
+      transform: rotate(0.25turn);
+      background-image: url('../images/icons/arrow.svg');
+    }
+    &:hover{
+        background-color: rgba($color: $bg-item, $alpha: .5);
+      }
+  }
+}
 
 
 
